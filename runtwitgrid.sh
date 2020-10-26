@@ -13,7 +13,7 @@
 twitpath="$HOME/bash/TwitGrid"
 
 # Command to open the html page in a browser.
-BROWSER="firefox --new-tab"
+BROWSER="x-www-browser"
 
 #==============================================================================
 echo ""
