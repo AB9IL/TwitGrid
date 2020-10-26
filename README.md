@@ -13,7 +13,7 @@ It doesn't mix multiple feeds up into an infinite-scrolling jumble.
 6. Wait for the browser to appear.
 7. The page will automatically refresh.
 
-#### Here are the original reator's instructions:
+#### Here are the original creator's instructions:
 It's easy to use:
 
 1. Save a copy of [`twitgrid.html`](https://raw.githubusercontent.com/nuket/TwitGrid/master/twitgrid.html) anywhere.
