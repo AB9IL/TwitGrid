@@ -4,6 +4,16 @@ TwitGrid is a simple, broadsheet layout for reading Twitter feeds that shows a
 dense, instant overview of the latest posts from only the users you care about.
 It doesn't mix multiple feeds up into an infinite-scrolling jumble.
 
+#### This fork is even easier than the original TwitGrid:
+1. Clone the TwitGrid directory and move it anywhere convenient to you.
+2. Edit the runtwitgrid.sh script to correctly contain the path to the html file and Twitter profile lists.
+3. Edit the BROWSER variable to contain the command for opening your web browser.
+4. On the command line, execute the script runtwitgrit.sh.
+5. When the menu appears, select the topic or enter Twitter profiles manually.
+6. Wait for the browser to appear.
+7. The page will automatically refresh.
+
+#### Here are the original reator's instructions:
 It's easy to use:
 
 1. Save a copy of [`twitgrid.html`](https://raw.githubusercontent.com/nuket/TwitGrid/master/twitgrid.html) anywhere.
