@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Copyright (c) 2019 by Philip Collier, radio AB9IL <webmaster@ab9il.net>
+# Copyright (c) 2020 by Philip Collier, radio AB9IL <webmaster@ab9il.net>
 # This script is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation; either version 3 of the License, or
@@ -11,6 +11,9 @@
 # User defined variables
 # path to TwitGrid diirectory
 twitpath="$HOME/bash/TwitGrid"
+
+# Command to open the html page in a browser.
+BROWSER="firefox --new-tab"
 
 #==============================================================================
 echo ""
@@ -65,6 +68,6 @@ esac
 sed -i "s/const handlesTopInterests.*/const handlesTopInterests = \'$LISTSTRING\';/g" \
     $twitpath/twitgrid.html
 #Start TwitGrid
-firefox --new-tab $twitpath/twitgrid.html &
+$BROWSER $twitpath/twitgrid.html &
 
 exit 0
