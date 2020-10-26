@@ -10,7 +10,7 @@
 #==============================================================================
 # User defined variables
 # path to TwitGrid diirectory
-twitpath="$HOME/bash/TwitGrid"
+twitpath="$HOME/TwitGrid"
 
 # Command to open the html page in a browser.
 BROWSER="x-www-browser"
