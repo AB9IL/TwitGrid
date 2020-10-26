@@ -1,4 +1,4 @@
-# TwitGrid: Because TweetDeck is a mess at times.
+# TwitGrid: a TweetDeck alternative.
 
 TwitGrid is a simple, broadsheet layout for reading Twitter feeds that shows a
 dense, instant overview of the latest posts from only the users you care about.
