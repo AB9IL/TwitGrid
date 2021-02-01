@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Copyright (c) 2020 by Philip Collier, radio AB9IL <webmaster@ab9il.net>
+# Copyright (c) 2021 by Philip Collier, radio AB9IL <webmaster@ab9il.net>
 # This script is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation; either version 3 of the License, or
@@ -41,14 +41,16 @@ case $REPLY in
     1) readarray -t LIST < $twitpath/tw_infosec;;
     2) readarray -t LIST < $twitpath/tw_linux;;
     3) readarray -t LIST < $twitpath/tw_oilgas;;
-    4) readarray -t LIST < $twitpath/tw_osint;;
-    5) readarray -t LIST < $twitpath/tw_politics;;
-    6) readarray -t LIST < $twitpath/tw_renenergy;;
-    7) readarray -t LIST < $twitpath/tw_rftech;;
-    8) readarray -t LIST < $twitpath/tw_rfsdr;;
-    9) readarray -t LIST < $twitpath/tw_shortwave;;
-    10) readarray -t LIST < $twitpath/tw_traders;;
-    11)  # Create a group of user-defined Twitter profiles.
+    4) readarray -t LIST < $twitpath/tw_osint-1;;
+    5) readarray -t LIST < $twitpath/tw_osint-2;;
+    6) readarray -t LIST < $twitpath/tw_uspolitics;;
+    7) readarray -t LIST < $twitpath/tw_renenergy;;
+    8) readarray -t LIST < $twitpath/tw_rftech;;
+    9) readarray -t LIST < $twitpath/tw_rfsdr;;
+    10) readarray -t LIST < $twitpath/tw_shortwave;;
+    11) readarray -t LIST < $twitpath/tw_traders;;
+    12) readarray -t LIST < $twitpath/tw_cnwatch;;
+    13)  # Create a group of user-defined Twitter profiles.
         echo -n "Please enter one to five Twitter handles: ";
         read;
         # Exit if no data is entered.
@@ -68,6 +70,6 @@ esac
 sed -i "s/const handlesTopInterests.*/const handlesTopInterests = \'$LISTSTRING\';/g" \
     $twitpath/twitgrid.html
 #Start TwitGrid
-$BROWSER $twitpath/twitgrid.html &
+$BROWSER $twitpath/twitgrid.html &> /dev/null
 
 exit 0
