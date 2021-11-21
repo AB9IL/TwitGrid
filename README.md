@@ -7,16 +7,17 @@ It doesn't mix multiple feeds up into an infinite-scrolling jumble.
 #### With this fork you may save several batches of Twitter feeds to watch:
 1. You must have Rofi or fzf for the menu.
 2. Clone the TwitGrid directory and move it anywhere convenient to you.
-3. Edit the runtwitgrid.sh script to correctly set paths to twitgrid.html and the folder with lists of Twitter feeds.
-4. Edit the OPTIONS variable to set your topic descriptions and associated batches of Twitter feeds.
-5. Edit the BROWSER variable to contain the command for opening your web browser.
-6. On the command line, execute the script runtwitgrit.sh.
-7. When the menu appears, select the topic or enter Twitter profiles manually.
-8. Wait for the browser to appear.
-9. The page will automatically refresh.
-10. You do not need to edit the twitgrid.html file.
+3. Edit the runtwitgrid.sh script to correctly set paths to twitgrid.html and the file containing topics and Twitter feeds.
+4. Edit the BROWSER variable to contain the command for opening your web browser.
+5. Edit the file tw_alltopics to set your topic descriptions and associated batches of Twitter feeds.
+6. On the command line, execute the script "runtwitgrit.sh"
+7. To use Rofi instead of fzf, use the command "runtwitgrid.sh gui"
+8. When the menu appears, select the topic or manually enter a user defined list of Twitter profiles.
+9. Wait for the browser to appear.
+10. The page will automatically refresh.
+11. You do not need to edit the twitgrid.html file.
 
-#### Here are nuket's original instructions:
+#### Here are nuket's original instructions, but you do not need to edit the handles:
 It's easy to use:
 
 1. Save a copy of [`twitgrid.html`](https://raw.githubusercontent.com/nuket/TwitGrid/master/twitgrid.html) anywhere.
