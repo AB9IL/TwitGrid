@@ -7,7 +7,7 @@ It doesn't mix multiple feeds up into an infinite-scrolling jumble.
 #### With this fork you may save several batches of Twitter feeds to watch:
 1. You must have Rofi or fzf for the menu.
 2. Clone the TwitGrid directory and move it anywhere convenient to you.
-3. Edit the runtwitgrid.sh script to correctly set paths to twitgrid.html and the file containing topics and Twitter feeds.
+3. Edit the runtwitgrid.sh script to correctly set paths to twitgrid.html and tw_alltopics (the file containing topics and Twitter feeds).
 4. Edit the BROWSER variable to contain the command for opening your web browser.
 5. Edit the file tw_alltopics to set your topic descriptions and associated batches of Twitter feeds.
 6. On the command line, execute the script "runtwitgrit.sh"
