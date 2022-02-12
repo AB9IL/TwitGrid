@@ -77,8 +77,10 @@ PROFILES=$(echo "${OPTIONS[@]}" | grep "$REPLY" | sed 's/^ //g;s/, /,/g' | awk -
 echo "
 Reading handles: $PROFILES"
 
-# Write the profile list into the html file
-sed -i "s/const handlesTopInterests.*/const handlesTopInterests = \'$PROFILES\';/g" \
+# Write the profile list and title tag into the html file
+sed -i "
+    s/const handlesTopInterests.*/const handlesTopInterests = \'$PROFILES\';/;
+    s/<title>TwitGrid.*/<title>$REPLY | TwitGrid<\/title>/;" \
     $twitpath/twitgrid.html
 
 #Start TwitGrid
