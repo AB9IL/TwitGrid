@@ -80,7 +80,7 @@ Reading handles: $PROFILES"
 # Write the profile list and title tag into the html file
 sed -i "
     s/const handlesTopInterests.*/const handlesTopInterests = \'$PROFILES\';/;
-    s/<title>TwitGrid.*/<title>$REPLY | TwitGrid<\/title>/;" \
+    s/<title>.*/<title>$REPLY | TwitGrid<\/title>/;" \
     $twitpath/twitgrid.html
 
 #Start TwitGrid
