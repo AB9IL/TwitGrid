@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Copyright (c) 2021 by Philip Collier, github.com/AB9IL
+# Copyright (c) 2022 by Philip Collier, github.com/AB9IL
 # This script is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation; either version 3 of the License, or
@@ -30,13 +30,13 @@
 twitpath="/usr/local/sbin/TwitGrid"
 
 # path to topic file
-topicpath="$twitpath/tw_alltopics"
+topicpath="$HOME/Documents/tw_alltopics"
 
 # Browser command
 BROWSER="x-www-browser --new-tab"
 
 #==============================================================================
-# CAUTION: DRAGONS LIVE BELOW THIS LINE 
+# CAUTION: DRAGONS LIVE BELOW THIS LINE
 #==============================================================================
 getlist(){
 # Create a group of user-defined Twitter profiles.
@@ -73,17 +73,20 @@ PROFILES=$(echo "${OPTIONS[@]}" | grep "$REPLY" | sed 's/^ //g;s/, /,/g' | awk -
 
 [[ "$PROFILES" == "Userdefined" ]] || LIST=$PROFILES
 [[ "$PROFILES" == "Userdefined" ]] && getlist
+[[ "$PROFILES" == "Edit" ]] && (x-terminal-emulator -e vim $topicpath) && exit
 
 echo "
 Reading handles: $PROFILES"
 
 # Write the profile list and title tag into the html file
+htmlfile="${REPLY// /}"
+cp ${twitpath}/twitgrid.html ${twitpath}/${htmlfile}.html
 sed -i "
     s/const handlesTopInterests.*/const handlesTopInterests = \'$PROFILES\';/;
-    s/<title>.*/<title>$REPLY | TwitGrid<\/title>/;" \
-    $twitpath/twitgrid.html
+    s/<title>.*/<title>${REPLY} | TwitGrid<\/title>/;" \
+    ${twitpath}/${htmlfile}.html
 
 #Start TwitGrid
-$BROWSER $twitpath/twitgrid.html &> /dev/null
+$BROWSER ${twitpath}/${htmlfile}.html &> /dev/null
 
 exit 0
