@@ -1,6 +1,6 @@
 # TwitGrid: a TweetDeck alternative.
 
-*Note: Twitter / X has turned into a complete shitshow AND TwitGrid will not function with all of the rate limiting.  This project will soom be changed to a Bash script called _BlueTabs_ and bring you browser tabs of feeds from Bluesky, Threads, and what remains of Twitter / X.
+*Note: Twitter / X has turned into a complete shitshow AND TwitGrid will not function with all of the rate limiting.  This project will soom be changed to a Bash script called _BlueTabs_ and bring you browser tabs of feeds from Bluesky, Threads, and what remains of Twitter / X.*
 
 TwitGrid is a simple, broadsheet layout for reading Twitter feeds that shows a
 dense, instant overview of the latest posts from only the users you care about.
