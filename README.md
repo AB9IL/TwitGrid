@@ -1,10 +1,12 @@
 # TwitGrid: a TweetDeck alternative.
 
+*Note: Twitter / X has turned into a complete shitshow AND TwitGrid will not function with all of the rate limiting.  This project will soom be changed to a Bash script called _BlueTabs_ and bring you browser tabs of feeds from Bluesky, Threads, and what remains of Twitter / X.
+
 TwitGrid is a simple, broadsheet layout for reading Twitter feeds that shows a
 dense, instant overview of the latest posts from only the users you care about.
 It doesn't mix multiple feeds up into an infinite-scrolling jumble.
 
-#### With this fork you may save several batches of Twitter feeds to watch:
+#### With this fork you may save several batches of feeds to watch:
 1. You must have Rofi or fzf for the menu.
 2. Clone the TwitGrid directory and move it anywhere convenient to you.
 3. Edit the runtwitgrid.sh script to correctly set paths to twitgrid.html and tw_alltopics (the file containing topics and Twitter feeds).
